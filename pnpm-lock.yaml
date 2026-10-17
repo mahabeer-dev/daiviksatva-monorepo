@@ -67,7 +67,7 @@ importers:
 
   packages/config-ts:
     devDependencies:
-      '@template/config-eslint':
+      '@daiviksatva/config-eslint':
         specifier: workspace:*
         version: link:../config-eslint
       eslint:

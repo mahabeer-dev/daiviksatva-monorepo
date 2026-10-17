@@ -28,7 +28,7 @@ Use **kebab-case**. The name shows up in three places:
 | Where                | Form                  | Example                  |
 | -------------------- | --------------------- | ------------------------ |
 | Folder               | kebab-case            | `apps/customer-app`      |
-| `package.json#name`  | `@<org>/<name>`       | `@template/customer-app` |
+| `package.json#name`  | `@<org>/<name>`       | `@daiviksatva/customer-app` |
 | Expo `app.json#slug` | kebab-case (no scope) | `customer-app`           |
 
 For the rest of this guide, replace `<app-name>` with your name and `<org>` with your scope (use `template` if you don't have one yet).
@@ -136,8 +136,8 @@ Overwrite the bootstrap-generated `package.json` with:
   },
   "devDependencies": {
     "@babel/core": "^7.25.0",
-    "@template/config-eslint": "workspace:*",
-    "@template/config-ts": "workspace:*",
+    "@daiviksatva/config-eslint": "workspace:*",
+    "@daiviksatva/config-ts": "workspace:*",
     "@types/react": "~18.3.12",
     "eslint": "^9.0.0",
     "typescript": "^5.6.2"
@@ -162,7 +162,7 @@ pnpm install
 
 ```json
 {
-  "extends": "@template/config-ts/react-native.json",
+  "extends": "@daiviksatva/config-ts/react-native.json",
   "include": ["src", "App.tsx", "metro.config.js", "babel.config.js"]
 }
 ```
@@ -174,7 +174,7 @@ pnpm install
 Create the file (Expo's blank template doesn't ship one):
 
 ```js
-import config from '@template/config-eslint/react-native.mjs';
+import config from '@daiviksatva/config-eslint/react-native.mjs';
 
 export default config;
 ```

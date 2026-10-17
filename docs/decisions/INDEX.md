@@ -32,7 +32,7 @@ marked `superseded by NNNN`, so the history survives.
 - **0006 — Tests are not written for new features unless explicitly asked.** Unrequested tests
   freeze behaviour that is still moving and inflate review. When asked: Vitest for pure units,
   Playwright from a committed `.spec.md` for anything crossing a boundary. *2026-10-17, accepted.*
-- **0007 — The `@template/` rename gate blocks prompts until the npm scope is renamed.** Projects
+- **0007 — The `@daiviksatva/` rename gate blocks prompts until the npm scope is renamed.** Projects
   shipped with template package names once; a blocking `UserPromptSubmit` hook is the only version of
   this reminder that people cannot skip. *2026-10-17, accepted.*
 - **0008 — `apps/` is generated on demand from `docs/generate-*.md`, never scaffolded freehand.**

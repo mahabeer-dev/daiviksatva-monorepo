@@ -8,9 +8,9 @@
 #   ./scripts/rename.sh acme https://github.com/acme/platform
 #
 # What this does:
-#   1. Replaces every "@template/" with "@<new-org>/" across tracked files
+#   1. Replaces every "@daiviksatva/" with "@<new-org>/" across tracked files
 #      (skips node_modules, .git, lockfiles, build output)
-#   2. Updates root package.json#name from "@template/root" to "@<new-org>/root"
+#   2. Updates root package.json#name from "@daiviksatva/root" to "@<new-org>/root"
 #   3. (Optional) Replaces any reference to this template's repo URL in README.md
 #      with the URL passed as the second argument
 
@@ -35,7 +35,7 @@ fi
 REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "$REPO_ROOT"
 
-echo "==> Renaming @template/ → @${NEW_ORG}/ across the repo..."
+echo "==> Renaming @daiviksatva/ → @${NEW_ORG}/ across the repo..."
 
 # Detect sed in-place flag (BSD vs GNU)
 if sed --version >/dev/null 2>&1; then
@@ -59,7 +59,7 @@ find . -type f \
   ! -name '*.png' ! -name '*.jpg' ! -name '*.jpeg' ! -name '*.gif' \
   ! -name '*.ico' ! -name '*.svg' ! -name '*.woff' ! -name '*.woff2' \
   -print0 |
-  xargs -0 sed "${SED_INPLACE[@]}" "s|@template/|@${NEW_ORG}/|g"
+  xargs -0 sed "${SED_INPLACE[@]}" "s|@daiviksatva/|@${NEW_ORG}/|g"
 
 echo "    done."
 

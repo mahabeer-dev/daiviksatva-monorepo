@@ -31,7 +31,7 @@ export default [
       // Use only the node resolver (with TS extensions). The typescript resolver
       // walks the tsconfig `extends` chain and doesn't follow pnpm's symlinks
       // when computing relative paths, so chains like
-      // app/tsconfig → @template/config-ts/base.json → ../../tsconfig.base.json
+      // app/tsconfig → @daiviksatva/config-ts/base.json → ../../tsconfig.base.json
       // crash with "Tsconfig not found node_modules/tsconfig.base.json" inside
       // any consuming app. Node resolution doesn't have this problem.
       // Trade-off: tsconfig `paths` (e.g. `@/foo`) won't be resolved by lint —

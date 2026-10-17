@@ -1,4 +1,4 @@
-# @template/config-ts
+# @daiviksatva/config-ts
 
 Shared TypeScript configurations for apps and packages in this monorepo. Each preset extends the root [`tsconfig.base.json`](../../tsconfig.base.json) and layers target-specific options on top.
 
@@ -6,10 +6,10 @@ Shared TypeScript configurations for apps and packages in this monorepo. Each pr
 
 | File                | Extend from                             | Use for                                              |
 | ------------------- | --------------------------------------- | ---------------------------------------------------- |
-| `base.json`         | `@template/config-ts/base.json`         | Generic libraries, shared packages, anything neutral |
-| `react.json`        | `@template/config-ts/react.json`        | React web apps and component libraries (DOM + JSX)   |
-| `node.json`         | `@template/config-ts/node.json`         | Backend services / Node 20 packages (`NodeNext`)     |
-| `react-native.json` | `@template/config-ts/react-native.json` | React Native / Expo apps (no DOM, RN types)          |
+| `base.json`         | `@daiviksatva/config-ts/base.json`         | Generic libraries, shared packages, anything neutral |
+| `react.json`        | `@daiviksatva/config-ts/react.json`        | React web apps and component libraries (DOM + JSX)   |
+| `node.json`         | `@daiviksatva/config-ts/node.json`         | Backend services / Node 20 packages (`NodeNext`)     |
+| `react-native.json` | `@daiviksatva/config-ts/react-native.json` | React Native / Expo apps (no DOM, RN types)          |
 
 ## Installation
 
@@ -19,7 +19,7 @@ Add the workspace package as a dev dependency:
 // apps/<app>/package.json
 {
   "devDependencies": {
-    "@template/config-ts": "workspace:*",
+    "@daiviksatva/config-ts": "workspace:*",
   },
 }
 ```
@@ -34,7 +34,7 @@ Reference the preset from your app's `tsconfig.json` via the `extends` field. Ov
 
 ```jsonc
 {
-  "extends": "@template/config-ts/react.json",
+  "extends": "@daiviksatva/config-ts/react.json",
   "include": ["src"],
   "compilerOptions": {
     "outDir": "dist",
@@ -46,7 +46,7 @@ Reference the preset from your app's `tsconfig.json` via the `extends` field. Ov
 
 ```jsonc
 {
-  "extends": "@template/config-ts/node.json",
+  "extends": "@daiviksatva/config-ts/node.json",
   "include": ["src"],
   "compilerOptions": {
     "outDir": "dist",
@@ -59,7 +59,7 @@ Reference the preset from your app's `tsconfig.json` via the `extends` field. Ov
 
 ```jsonc
 {
-  "extends": "@template/config-ts/react-native.json",
+  "extends": "@daiviksatva/config-ts/react-native.json",
   "include": ["app", "src", "App.tsx"],
 }
 ```
@@ -68,7 +68,7 @@ Reference the preset from your app's `tsconfig.json` via the `extends` field. Ov
 
 ```jsonc
 {
-  "extends": "@template/config-ts/base.json",
+  "extends": "@daiviksatva/config-ts/base.json",
   "include": ["src"],
   "compilerOptions": {
     "outDir": "dist",

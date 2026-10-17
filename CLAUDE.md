@@ -8,8 +8,8 @@ Everything below is Claude-Code-specific mechanics that other agents have no use
 
 ## Setup gate — rename before any work
 
-This template ships under the `@template/` npm scope. A real project must be rebranded to its own
-org scope before any feature work, so apps never ship as `@template/...`.
+This template ships under the `@daiviksatva/` npm scope. A real project must be rebranded to its own
+org scope before any feature work, so apps never ship as `@daiviksatva/...`.
 [`scripts/check-template-rename.sh`](./scripts/check-template-rename.sh) runs on three events,
 with the event passed as `$1`:
 
@@ -53,7 +53,7 @@ bash scripts/rename.sh <your-org>   # Windows PowerShell / CMD (runs through Git
 [`.claude/allow-template-scope`](./.claude/allow-template-scope) or `ALLOW_TEMPLATE_SCOPE=1`. Both
 are local-only, so clones never inherit them.
 
-> The gate is rename-proof: the script never stores the literal `@template/` token as one string,
+> The gate is rename-proof: the script never stores the literal `@daiviksatva/` token as one string,
 > so `scripts/rename.sh`'s find+sed cannot rewrite the guard and silently disable it.
 
 

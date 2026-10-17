@@ -11,7 +11,7 @@ Other agents: read `docs/decisions/INDEX.md` before your first edit.
 
 ## 0. Setup gate — this repo refuses to work until it is renamed
 
-The template ships under the `@template/` npm scope. Every `package.json#name` must be rebranded
+The template ships under the `@daiviksatva/` npm scope. Every `package.json#name` must be rebranded
 to the project's own scope before any feature work. A `UserPromptSubmit` hook blocks every prompt
 until that is true, so this is the first thing to fix, not something to work around.
 

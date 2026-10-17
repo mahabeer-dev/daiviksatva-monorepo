@@ -25,8 +25,8 @@ Use **kebab-case**. The name shows up in three places:
 | Where                  | Form                 | Example                              |
 | ---------------------- | -------------------- | ------------------------------------ |
 | Folder                 | kebab-case           | `apps/admin-dashboard`               |
-| `package.json#name`    | `@<org>/<name>`      | `@template/admin-dashboard`          |
-| `pnpm --filter` target | matches package name | `--filter @template/admin-dashboard` |
+| `package.json#name`    | `@<org>/<name>`      | `@daiviksatva/admin-dashboard`          |
+| `pnpm --filter` target | matches package name | `--filter @daiviksatva/admin-dashboard` |
 
 Pick a name that says **what the app is for**: `admin-dashboard`, `customer-portal`, `marketing-site` — not `web2`, `react-app`.
 
@@ -80,8 +80,8 @@ What stayed: `src/main.tsx`, `src/vite-env.d.ts`, `index.html`, `vite.config.ts`
     "react-router-dom": "^6.27.0"
   },
   "devDependencies": {
-    "@template/config-eslint": "workspace:*",
-    "@template/config-ts": "workspace:*",
+    "@daiviksatva/config-eslint": "workspace:*",
+    "@daiviksatva/config-ts": "workspace:*",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
     "@vitejs/plugin-react": "^6.0.0",
@@ -110,7 +110,7 @@ pnpm install
 
 ```json
 {
-  "extends": "@template/config-ts/react.json",
+  "extends": "@daiviksatva/config-ts/react.json",
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
@@ -126,7 +126,7 @@ The `@/*` path lets you write `import { apiClient } from '@/lib/api-client'` ins
 ## 7. Replace `eslint.config.mjs`
 
 ```js
-import config from '@template/config-eslint/react.mjs';
+import config from '@daiviksatva/config-eslint/react.mjs';
 
 export default config;
 ```
@@ -745,7 +745,7 @@ This prevents type drift between workspace packages (e.g., if your app pulled in
 
 ### `pnpm lint` errors with "Tsconfig not found ... node_modules/tsconfig.base.json"
 
-You shouldn't see this. `@template/config-eslint` is configured to skip the typescript resolver (it walks tsconfig `extends` chains and breaks on pnpm symlinks). If you see this error, you've added a per-app override to `eslint.config.mjs` that re-enables the typescript resolver — **remove it**. The shared config handles the resolver correctly without per-app config.
+You shouldn't see this. `@daiviksatva/config-eslint` is configured to skip the typescript resolver (it walks tsconfig `extends` chains and breaks on pnpm symlinks). If you see this error, you've added a per-app override to `eslint.config.mjs` that re-enables the typescript resolver — **remove it**. The shared config handles the resolver correctly without per-app config.
 
 ### `import.meta.env.VITE_FOO` is `unknown` in TypeScript
 

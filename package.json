@@ -1,5 +1,5 @@
 {
-  "name": "@template/root",
+  "name": "@daiviksatva/root",
   "version": "0.0.0",
   "private": true,
   "description": "Fullstack MERN + React Native monorepo template",

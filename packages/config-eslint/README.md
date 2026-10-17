@@ -1,4 +1,4 @@
-# @template/config-eslint
+# @daiviksatva/config-eslint
 
 Shared **ESLint 9 (flat config)** presets for the monorepo. Each preset is a complete `eslint.config.mjs`-style array — import it from your app and either re-export it directly or spread it to add overrides.
 
@@ -6,10 +6,10 @@ Shared **ESLint 9 (flat config)** presets for the monorepo. Each preset is a com
 
 | Preset                                     | Use for                             | Built on                                  |
 | ------------------------------------------ | ----------------------------------- | ----------------------------------------- |
-| `@template/config-eslint/base.mjs`         | Generic TS/JS code, shared packages | `@eslint/js` + `typescript-eslint`        |
-| `@template/config-eslint/react.mjs`        | React web apps                      | base + `react`, `react-hooks`, `jsx-a11y` |
-| `@template/config-eslint/node.mjs`         | Node 20 backend services            | base + Node globals                       |
-| `@template/config-eslint/react-native.mjs` | React Native / Expo apps            | base + `react`, `react-hooks`, RN globals |
+| `@daiviksatva/config-eslint/base.mjs`         | Generic TS/JS code, shared packages | `@eslint/js` + `typescript-eslint`        |
+| `@daiviksatva/config-eslint/react.mjs`        | React web apps                      | base + `react`, `react-hooks`, `jsx-a11y` |
+| `@daiviksatva/config-eslint/node.mjs`         | Node 20 backend services            | base + Node globals                       |
+| `@daiviksatva/config-eslint/react-native.mjs` | React Native / Expo apps            | base + `react`, `react-hooks`, RN globals |
 
 All presets include:
 
@@ -27,7 +27,7 @@ Add the workspace package as a dev dependency:
 // apps/<app>/package.json
 {
   "devDependencies": {
-    "@template/config-eslint": "workspace:*",
+    "@daiviksatva/config-eslint": "workspace:*",
     "eslint": "^9.0.0",
     "typescript": "^5.6.0",
   },
@@ -44,7 +44,7 @@ Create `eslint.config.mjs` in your app and re-export the preset that matches its
 
 ```js
 // apps/web/eslint.config.mjs
-import config from '@template/config-eslint/react.mjs';
+import config from '@daiviksatva/config-eslint/react.mjs';
 
 export default config;
 ```
@@ -53,7 +53,7 @@ export default config;
 
 ```js
 // apps/api/eslint.config.mjs
-import config from '@template/config-eslint/node.mjs';
+import config from '@daiviksatva/config-eslint/node.mjs';
 
 export default config;
 ```
@@ -62,7 +62,7 @@ export default config;
 
 ```js
 // apps/mobile/eslint.config.mjs
-import config from '@template/config-eslint/react-native.mjs';
+import config from '@daiviksatva/config-eslint/react-native.mjs';
 
 export default config;
 ```
@@ -73,7 +73,7 @@ Spread the preset and append your own config blocks. ESLint flat config merges l
 
 ```js
 // apps/web/eslint.config.mjs
-import config from '@template/config-eslint/react.mjs';
+import config from '@daiviksatva/config-eslint/react.mjs';
 
 export default [
   ...config,

@@ -25,8 +25,8 @@ Use **kebab-case**. The name shows up in three places:
 | Where                  | Form                 | Example                       |
 | ---------------------- | -------------------- | ----------------------------- |
 | Folder                 | kebab-case           | `apps/user-api`               |
-| `package.json#name`    | `@<org>/<name>`      | `@template/user-api`          |
-| `pnpm --filter` target | matches package name | `--filter @template/user-api` |
+| `package.json#name`    | `@<org>/<name>`      | `@daiviksatva/user-api`          |
+| `pnpm --filter` target | matches package name | `--filter @daiviksatva/user-api` |
 
 Pick a name that says **what the service owns**, not its tech: `user-api`, `billing-api`, `notifications-api` — not `node-server`, `backend2`.
 
@@ -107,8 +107,8 @@ Create `apps/<app-name>/package.json`:
     "zod": "^3.23.8"
   },
   "devDependencies": {
-    "@template/config-eslint": "workspace:*",
-    "@template/config-ts": "workspace:*",
+    "@daiviksatva/config-eslint": "workspace:*",
+    "@daiviksatva/config-ts": "workspace:*",
     "@types/cors": "^2.8.17",
     "@types/express": "^4.17.21",
     "@types/node": "^20.14.10",
@@ -136,7 +136,7 @@ Create `apps/<app-name>/package.json`:
 pnpm install
 ```
 
-This links the workspace deps (`@template/config-ts`, `@template/config-eslint`) and downloads everything else.
+This links the workspace deps (`@daiviksatva/config-ts`, `@daiviksatva/config-eslint`) and downloads everything else.
 
 > **🔁 Anytime you change `package.json`** — adding a dep, bumping a version, renaming a script — run `pnpm install` from the repo root again. The workspace state needs to reflect the manifest before any other command will work.
 
@@ -144,7 +144,7 @@ This links the workspace deps (`@template/config-ts`, `@template/config-eslint`)
 
 ```json
 {
-  "extends": "@template/config-ts/node.json",
+  "extends": "@daiviksatva/config-ts/node.json",
   "compilerOptions": {
     "outDir": "dist",
     "rootDir": "src"
@@ -168,7 +168,7 @@ import { helloService } from './service';
 ## 7. `eslint.config.mjs`
 
 ```js
-import config from '@template/config-eslint/node.mjs';
+import config from '@daiviksatva/config-eslint/node.mjs';
 
 export default config;
 ```

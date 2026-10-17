@@ -43,7 +43,7 @@ lerna-debug.log*
 
 # Claude Code — local-only overrides (keep committed: .claude/settings.json)
 .claude/settings.local.json
-# Local opt-out for the @template/ rename gate; must NOT reach clones (CLAUDE.md §10)
+# Local opt-out for the @daiviksatva/ rename gate; must NOT reach clones (CLAUDE.md §10)
 .claude/allow-template-scope
 
 # OS files
