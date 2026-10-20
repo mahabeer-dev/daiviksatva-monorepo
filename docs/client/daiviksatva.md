@@ -20,15 +20,22 @@ explicit that several details were heard in a meeting and never verified. Nothin
 - **Others met at the clinic 2026-10-17:** Anurag and Kriti (as reported). A further
   practitioner name sounded like "Preeti" and a holistic specialist like "deepavan" —
   spellings and roles are **not** confirmed.
-- **Discipline:** Pawan first described a homeopathic clinic; the clinic name says Ayurveda;
-  the meeting described a holistic practice encompassing Ayurveda. Not yet reconciled — ask.
+- **Discipline: holistic health** (encompassing Ayurveda). **Settled 2026-10-20 by Mahabeer** —
+  **not** homeopathy; the "homeopathic" description from the 2026-09-30 call was wrong. All
+  client-facing copy describes the practice as holistic health, consistent with the clinic name.
 
 ## What exists today
 
 - **Prototype sent 2026-10-03:** https://daiviksatva.webgrove.in/ — photos, reviews and team
   details are placeholders. Explicitly flagged as such to Pawan.
-- They say they hold an existing domain; the spelling in the rough notes is unclear and must
-  be confirmed before any DNS or deployment planning.
+- **Domains confirmed 2026-10-20** (registrar screenshot from Pawan): `daiviksatva.com`
+  (expires 5 Jul 2027), `daiviksatva.in` (10 Jul 2027), `daiviksatva.org` (26 Jul 2027),
+  `daiviksatva.co.in` (26 Jul 2027). Spelling is **daiviksatva**, matching the prototype
+  subdomain. Registrar not visible in the screenshot and still needed for DNS. One must be
+  primary, the other three redirecting — recommended primary is `.com`.
+- **No Google presence found 2026-10-20.** A search by clinic name returns no listing or
+  reviews. Getting the Google Business Profile claimed is likely the highest-value free action
+  available to them.
 - No active website of their own. A website is their stated immediate priority because people
   keep asking for one.
 
@@ -52,11 +59,17 @@ marketing site + enquiry on our build, consultation requests over WhatsApp/phone
 any records in the clinic's own Google Workspace with the practitioner as controller. CRM
 feature _names_ may appear only as future discovery, never as a deliverable.
 
-## Commercials — unsettled
+## Commercials — priced 2026-10-20
 
-- Mahabeer floated the **Custom tier (from ₹50,000)**; Pawan stated a budget around
-  **₹30,000**. Mahabeer said he would review the budget _after_ discussing the plan. **No
-  discount was offered and none may be implied.**
+- **Website: ₹40,000**, 20% (₹8,000) upfront. Against the ₹50,000 Custom tier quoted in the
+  meeting and Pawan's stated ~₹30,000 budget. The reduction is tied to a **scope change** —
+  online appointment booking moves out of the website into the CRM stage — so the client docs
+  present it as smaller scope, not a discount.
+- **Social media: ₹35,000/month** against a ₹45,000 standard rate, justified by the long-term
+  relationship. This one **is** a straight reduction with no scope change, and pricing was never
+  discussed in the meeting, so the docs present it as a fresh proposal.
+- Both supersede the standing "no discounting" line in `business/webgrove.md` for this client.
+  Mahabeer's decision, made with the budget gap in front of him.
 - Standard tiers: Starter ₹14,999 · **Clinic ₹29,999 (up to five pages)** · Custom from
   ₹50,000 · optional care plan ₹999/month.
 - Open decision: does a five-page Clinic build meet the need, or is a Custom quote required?
@@ -77,7 +90,7 @@ scope, price, compliance checks and dates conditional on approval.
 - **Tenure claims conflict** ("since 2004" vs "14 years"). Publish neither without evidence.
 - No superlatives, no "best" / "No. 1", no scarcity or urgency framing, no discounting.
 - Do not warrant their regulatory compliance, and do not advise on their teleconsultation
-  obligations — homeopathy in India sits under NCISM/CCH, not the NMC.
+  obligations — Ayurveda in India sits under NCISM, not the NMC.
 - Voice is **first person singular** ("I design and build"), never "we" or "our team".
 
 ## Brand / implementation defaults
@@ -96,9 +109,10 @@ checklist.
 
 Blocking items before build work starts:
 
-- [ ] Confirm the exact clinic name, and whether the practice is homeopathy, Ayurveda or both.
+- [x] ~~Confirm whether the practice is homeopathy, Ayurveda or both~~ — holistic health, settled
+      2026-10-20. Exact clinic name for publication still to confirm.
 - [ ] Confirm practitioner names, spellings and roles.
-- [ ] Confirm the domain they hold (exact spelling).
+- [x] ~~Confirm the domain they hold~~ — four confirmed 2026-10-20; registrar and primary still open.
 - [ ] Get the approved service list, clinic timings, address, contact number, logo and photos
       — over WhatsApp, from Pawan.
 - [ ] Settle Clinic ₹29,999 vs a Custom quote, and whether any social service is being offered.
